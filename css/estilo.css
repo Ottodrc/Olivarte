@@ -1,0 +1,358 @@
+/*variables*/
+/*variables*/
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-image: linear-gradient(white, #fdf6a1);
+  background-size: contain; }
+
+/*!menu*/
+.olivArte {
+  grid-area: logo;
+  background-color: #90A955;
+  border-bottom: 1px solid #212529;
+  font-weight: thin;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-left: 2px;
+  justify-content: flex-start; }
+  .olivArte a {
+    color: #eef788;
+    font-family: 'Rouge Script', cursive;
+    text-decoration: none;
+    align-self: center; }
+
+header {
+  grid-area: nav;
+  height: fit-content; }
+  header .menu {
+    border-bottom: 1px #212529 solid;
+    width: 100%;
+    background-color: #90A955; }
+    header .menu .menu__lista {
+      height: 100%;
+      list-style: none;
+      display: flex; }
+      header .menu .menu__lista .menu__item .menu__link {
+        text-decoration: none;
+        color: #eef788;
+        margin: 0px 10px; }
+        header .menu .menu__lista .menu__item .menu__link:hover {
+          color: #212529; }
+
+/**fin de menu*/
+/*!section*/
+.section {
+  grid-area: section;
+  display: flex; }
+  .section .section__article .section__p a {
+    text-decoration: none; }
+
+/**fin del section*/
+ /*footer*/
+ .redesSociales {
+  margin-left: 2px;
+  height: 30px;
+  font-size: 15px;
+}
+.redesSociales .icono{
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
+  margin: 0 5px;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.redesSociales > p{
+  font-size: 18px;
+  
+  margin-right: 5px;
+}
+/*Fin del footer*/
+.tunas {
+  grid-area: aceitunas; }
+  .tunas .tunas__sabores {
+    display: flex;
+    padding: 0px; }
+    .tunas .tunas__sabores .tunas__lista {
+      color: #4F772D; }
+
+.quesos {
+  grid-area: quesos; }
+  .quesos .quesos__lista {
+    color: #4F772D; }
+
+#carrusel {
+  grid-area: carrusel;
+  justify-self: center;
+  align-self: center; }
+  #carrusel::after {
+    width: fit-content;
+    height: auto; }
+
+@media only screen and (max-width: 600px) {
+  #grilla2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 9fr 0.3fr;
+    grid-template-areas: "logo nav nav"
+ "section section section"
+ "footer footer footer"; }
+  /*menu*/
+  .olivArte {
+    grid-area: logo;
+    font-size: 40px;
+    height: 90px; }
+  header {
+    grid-area: nav; }
+    header .menu {
+      font-size: 12px;
+      height: 90px; }
+      header .menu .menu__lista {
+        height: 100%;
+        margin: 0%;
+        padding: 0%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end; }
+        header .menu .menu__lista .menu__item {
+          width: fit-content;
+          height: fit-content; }
+          header .menu .menu__lista .menu__item .menu__link {
+            margin: 0px 5px; }
+  /*fin del menu*/
+  /*!section*/
+  #pregFrecuentes {
+    font-size: 50px;
+    font-weight: 500;
+    font-style: normal;
+    color: #31572C;
+    text-align: center;
+    font-family: 'Rouge Script', cursive; }
+  .section {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    .section .section__article {
+      background-color: white;
+      width: 90%;
+      border-radius: 2em; }
+      .section .section__article .section__titulo {
+        font-size: 32px;
+        font-weight: 500;
+        font-style: italic;
+        color: #31572C;
+        text-align: center;
+        font-family: 'Rouge Script', cursive; }
+      .section .section__article .section__p {
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        color: #4F772D;
+        text-align: center;
+        font-family: 'Lora', serif;
+        font-style: normal;
+        font-weight: 500; }
+  /**fin del section*/
+  #grilla1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 100px 500px 250px 700px 20px;
+    grid-template-areas: "logo nav"
+ "aceitunas aceitunas"
+ "quesos quesos"
+ "carrusel carrusel"
+ "footer footer"; }
+  .tunas {
+    height: fit-content; }
+    .tunas .tunas__titulo {
+      font-size: 40px;
+      font-weight: normal;
+      font-style: normal;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+    .tunas .tunas__parrafo {
+      font-size: 20px;
+      line-height: 22px;
+      text-align: center;
+      color: #4F772D;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500; }
+  .quesos {
+    height: fit-content; }
+    .quesos .quesos__titulo {
+      font-size: 40px;
+      font-weight: normal;
+      font-style: normal;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+    .quesos .quesos__parrafos {
+      font-size: 20px;
+      line-height: 22px;
+      text-align: center;
+      color: #4F772D;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500; }
+  #carrusel {
+    width: fit-content; }
+    #carrusel .titulo {
+      font-size: 40px;
+      font-weight: normal;
+      font-style: italic;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+  /*!footer*/
+  .contenedor .footer {
+    height: 30px; }
+    .contenedor .footer .footer__div {
+      height: 100%; }
+      .contenedor .footer .footer__div .footer__p {
+        font-size: 20px; }
+      .contenedor .footer .footer__div .footer__icono {
+        color: #eef788;
+        justify-self: center;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 20px;
+        box-shadow: 0 0 2.5px 4px rgba(0, 0, 0, 0.09); }
+        .contenedor .footer .footer__div .footer__icono:hover {
+          color: #212529; }
+  /**fin del footer*/ }
+
+@media only screen and (min-width: 1024px) {
+  #grilla2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 3fr;
+    grid-template-rows: 40px 900px 40px;
+    grid-template-areas: "logo nav nav nav"
+ "section section section section"
+ "footer footer footer footer";
+    row-gap: 10px;
+    width: 100%;
+    height: auto; }
+  /*!menu*/
+  .olivArte {
+    font-size: 40px;
+    height: 40px;
+    justify-content: flex-start; }
+  header .menu {
+    font-size: 20px;
+    height: 40px; }
+    header .menu .menu__lista {
+      height: 100%;
+      flex-direction: row;
+      align-items: center; }
+      header .menu .menu__lista .menu__item .menu__link {
+        margin: 0px 10px; }
+  /**fin de menu*/
+  /*!section*/
+  #pregFrecuentes {
+    font-size: 70px;
+    font-weight: 500;
+    font-style: normal;
+    color: #31572C;
+    text-align: center;
+    font-family: 'Rouge Script', cursive; }
+  .section {
+    flex-direction: column;
+    justify-content: space-between; }
+    .section .section__article .section__titulo {
+      font-size: 64px;
+      font-weight: 500;
+      font-style: italic;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+    .section .section__article .section__p {
+      font-size: 32px;
+      line-height: 40px;
+      text-align: center;
+      color: #4F772D;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500; }
+  /**fin del section*/
+  /*!footer*/
+  .contenedor .footer {
+    height: 40px;
+    font-size: 20px; }
+    .contenedor .footer .footer__div {
+      height: 40px; }
+      .contenedor .footer .footer__div .footer__p {
+        font-size: 20px; }
+      .contenedor .footer .footer__div .footer__icono {
+        font-size: 25px; }
+  /**fin del footer*/
+  #grilla1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 3fr;
+    grid-template-areas: "logo nav nav nav"
+ "aceitunas aceitunas aceitunas aceitunas"
+ "quesos quesos quesos quesos"
+ "carrusel carrusel carrusel carrusel"
+ "footer footer footer footer"; }
+  .tunas {
+    grid-area: aceitunas; }
+    .tunas .tunas__titulo {
+      font-size: 68px;
+      font-weight: normal;
+      font-style: normal;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+    .tunas .tunas__parrafo {
+      font-size: 32px;
+      line-height: 40px;
+      text-align: center;
+      color: #4F772D;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500; }
+    .tunas .tunas__sabores {
+      flex-direction: row; }
+      .tunas .tunas__sabores .tunas__lista {
+        font-size: 22px; }
+  .quesos .quesos__titulo {
+    font-size: 68px;
+    font-weight: normal;
+    font-style: normal;
+    color: #31572C;
+    text-align: center;
+    font-family: 'Rouge Script', cursive; }
+  .quesos .quesos__parrafos {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #4F772D;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 500; }
+  .quesos .quesos__lista {
+    font-size: 22px; }
+  #carrusel {
+    width: 700px; }
+    #carrusel .titulo {
+      font-size: 64px;
+      font-weight: 500;
+      font-style: normal;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+    #carrusel .carousel-inner {
+      height: 120vh; } }

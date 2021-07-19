@@ -1,0 +1,432 @@
+/*variables*/
+$colorCrema:#eef788;
+$colorHover:#212529;
+$Verde1:#90A955;
+$verde2:#31572C;
+$verde3:#4F772D;
+$font:32px;
+/*variables*/
+p{
+    color: cyan;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(white, #fdf6a1);
+    background-size: contain;
+}
+@mixin titulos ($size,$weight,$style){
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    color: $verde2;
+    text-align: center;
+    font-family: 'Rouge Script', cursive;
+}
+
+@mixin parrafos ($size, $height, $align){
+    font-size:$size;
+    line-height: $height;
+    text-align: $align;
+    color: $verde3;
+    text-align: center;
+    font-family:'Lora', serif;
+    font-style:normal;
+    font-weight: 500;
+}
+
+/*!menu*/
+.olivArte{
+    grid-area: logo;
+    background-color: $Verde1;
+    border-bottom: 1px solid $colorHover;
+    font-weight: thin;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-left: 2px;
+    justify-content: flex-start; 
+    a{
+        color: $colorCrema;
+        font-family: 'Rouge Script', cursive;
+        text-decoration: none;
+        align-self: center;
+      }
+  }
+header{
+    grid-area: nav;
+    height: fit-content;
+    .menu{
+        border-bottom: 1px  $colorHover solid;
+        width: 100%;
+        background-color: $Verde1;
+        
+        .menu__lista{
+            height: 100%;
+            list-style: none;
+            display: flex;
+        .menu__item{
+            .menu__link{
+                text-decoration: none;
+                color: $colorCrema;
+                margin: 0px 10px;
+                &:hover{
+                    color: $colorHover;
+                }
+            }
+        }
+        }
+
+}
+}
+/**fin de menu*/
+
+
+/*!section*/
+.section{
+    grid-area: section;
+    display: flex;
+    .section__article{
+        .section__p{
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+/**fin del section*/
+
+/*!footer*/
+.divFoot{
+    grid-area: footer;
+    height:fit-content;
+    align-self: end;
+    background-color: #90A955;
+
+  .redesSociales{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 1px rgba(27, 32, 26, 0.979)solid;
+  
+   .icono{
+    text-decoration: none;
+    color: #eef788;
+    border-radius: 2px;
+    text-align: center;
+    
+    &:hover {
+    color: #212529;
+    }
+}
+
+  p{
+    color: #eef788;
+    font-family:'Lora', serif;
+    margin: 0rem;
+  }
+}
+}
+  /**Fin del footer*/
+  
+  
+
+.tunas{
+    grid-area: aceitunas;
+
+    .tunas__sabores{
+        display: flex;
+        padding: 0px;
+        .tunas__lista{
+            color: $verde3;
+        }
+    }
+
+
+
+}
+
+.quesos{
+    grid-area: quesos;
+    .quesos__lista{
+        color: $verde3;
+
+    }
+}
+
+#carrusel{
+    grid-area: carrusel;
+    justify-self: center;
+    align-self: center;
+
+  &::after{
+    width: fit-content;
+    height: auto;
+  }  
+}
+ 
+@media only screen and (max-width: 600px){
+#grilla2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 9fr 0.3fr;
+        grid-template-areas:"logo nav nav"
+                            "section section section"
+                            "footer footer footer";
+}
+/*menu*/
+.olivArte{
+    grid-area: logo;
+    font-size: 40px;
+    height: 90px;
+   
+}
+header{
+    grid-area: nav;
+    .menu{
+        font-size: 12px;
+        height: 90px;
+        .menu__lista{
+            height: 100%;
+            margin: 0%;
+            padding: 0%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            .menu__item{
+                width: fit-content;
+        
+                height: fit-content;
+                .menu__link{
+                    margin: 0px 5px;
+                }
+            }
+        }
+    }
+}
+/*fin del menu*/
+
+/*!section*/
+#pregFrecuentes{
+    @include titulos(50px,500 ,normal )
+}
+.section{
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    .section__article{
+        background-color: white;
+        width: 90%;
+        border-radius: 2em;
+        .section__titulo{
+          @include titulos(32px,500 ,italic )
+            
+        }
+        .section__p{
+            @include parrafos(20px,40px,center);
+            
+        }
+    }
+}
+/**fin del section*/
+#grilla1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 100px 500px 250px 700px 20px;
+    grid-template-areas: "logo nav"
+                        "aceitunas aceitunas"
+                        "quesos quesos"
+                        "carrusel carrusel"
+                        "footer footer";
+}
+.tunas{
+    height: fit-content;
+    .tunas__titulo{
+        @include titulos(($font)+8,normal,normal )
+    }
+    .tunas__parrafo{
+        @include parrafos(20px,22px ,center )
+    }
+}
+
+.quesos{
+    height: fit-content;
+    .quesos__titulo{
+        @include titulos(($font)+8,normal ,normal )
+    }
+    .quesos__parrafos{
+        @include parrafos(20px,22px ,center )
+    }
+}
+#carrusel{
+    width: fit-content;
+    .titulo{
+        @include titulos($font+8,normal ,italic)
+    }
+}
+ /*footer*/
+ .redesSociales {
+    margin-left: 2px;
+    height: 30px;
+    font-size: 15px;
+  
+  .icono{
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
+    margin: 0 5px;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  
+  p{
+    font-size: 18px;
+    
+    margin-right: 5px;
+  }
+}
+  /*Fin del footer*/
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+#grilla2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 3fr;
+    grid-template-rows:  40px 900px 40px;
+    grid-template-areas: "logo nav nav nav"
+    "section section section section"
+    "footer footer footer footer";
+
+    row-gap: 10px;
+    width: 100%;
+    height: auto;
+}
+
+/*!menu*/
+.olivArte{
+    font-size: 40px;
+    height: 40px;
+    justify-content: flex-start; 
+}
+  header{
+    .menu{
+        font-size: 20px;
+        height: 40px;
+        
+        .menu__lista{
+            height: 100%;
+            flex-direction: row;
+            align-items: center;
+            .menu__item{
+                .menu__link{
+                margin: 0px 10px;
+                }
+            }
+        }
+
+    }
+}
+/**fin de menu*/
+
+/*!section*/
+#pregFrecuentes{
+    @include titulos(($font*2)+6,500 ,normal )
+}
+.section{
+    flex-direction: column;
+    justify-content:space-between ;
+    .section__article{
+        
+        .section__titulo{
+          @include titulos($font*2,500 ,italic )
+            
+        }
+        .section__p{
+            @include parrafos($font,40px,center);
+            
+        }
+    }
+}
+/**fin del section*/
+
+/*!footer*/
+.contenedor{
+    .footer{
+        height: 40px;
+        font-size: 20px;
+
+        .footer__div{
+            height: 40px;
+            .footer__p{
+                font-size: 20px;
+            }
+            .footer__icono{
+                font-size: 25px;
+
+            }
+        }
+    }
+}
+/**fin del footer*/
+
+#grilla1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 3fr;
+    grid-template-areas: "logo nav nav nav"
+                        "aceitunas aceitunas aceitunas aceitunas"
+                        "quesos quesos quesos quesos"
+                        "carrusel carrusel carrusel carrusel"
+                        "footer footer footer footer";
+}
+.tunas{
+    grid-area: aceitunas;
+    .tunas__titulo{
+        @include titulos(($font*2)+4,normal ,normal)
+        
+    }
+    .tunas__parrafo{
+        @include parrafos($font,40px,center);
+
+    }
+    .tunas__sabores{
+        flex-direction: row;
+        .tunas__lista{
+            font-size: 22px;
+        }
+    }
+
+
+
+}
+
+.quesos{
+    .quesos__titulo{
+        @include titulos(($font*2)+4,normal ,normal)
+
+    }
+    .quesos__parrafos{
+        @include parrafos($font,40px,center)
+    }
+    .quesos__lista{
+        font-size: 22px;
+    }
+}
+
+#carrusel{
+
+    width: 700px;
+    .titulo{
+        @include titulos($font*2,500 ,normal )
+    }
+ 
+  .carousel-inner{
+    height: 120vh;
+    }
+}
+ 
+}
