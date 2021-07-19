@@ -3,7 +3,7 @@
     padding: 0px;
   }
 body { 
-    background-image:linear-gradient(white,#faf9b7);
+    background-color:#faf9b7;
     background-size: contain;
     height: auto;
 }

@@ -5,7 +5,7 @@
   margin: 0; }
 
 body {
-  background-image: linear-gradient(white, #fdf6a1);
+  background-color: #faf9b7;
   background-size: contain; }
 
 /*!menu*/
@@ -52,27 +52,31 @@ header {
     text-decoration: none; }
 
 /**fin del section*/
- /*footer*/
- .redesSociales {
-  margin-left: 2px;
-  height: 30px;
-  font-size: 15px;
-}
-.redesSociales .icono{
-  width: 18px;
-  height: 18px;
-  box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
-  margin: 0 5px;
-  line-height: 18px;
-  font-size: 18px;
-}
+/*!footer*/
+.divFoot {
+  grid-area: footer;
+  height: fit-content;
+  align-self: end;
+  background-color: #90A955; }
+  .divFoot .redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 1px rgba(27, 32, 26, 0.979) solid; }
+    .divFoot .redesSociales .icono {
+      text-decoration: none;
+      color: #eef788;
+      border-radius: 2px;
+      text-align: center; }
+      .divFoot .redesSociales .icono:hover {
+        color: #212529; }
+    .divFoot .redesSociales p {
+      color: #eef788;
+      font-family: 'Lora', serif;
+      margin: 0rem;
+      margin-right: 5px; }
 
-.redesSociales > p{
-  font-size: 18px;
-  
-  margin-right: 5px;
-}
-/*Fin del footer*/
+/**Fin del footer*/
 .tunas {
   grid-area: aceitunas; }
   .tunas .tunas__sabores {
@@ -99,9 +103,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 9fr 0.3fr;
-    grid-template-areas: "logo nav nav"
- "section section section"
- "footer footer footer"; }
+    grid-template-areas: "logo nav nav" "section section section" "footer footer footer"; }
   /*menu*/
   .olivArte {
     grid-area: logo;
@@ -135,7 +137,7 @@ header {
     font-family: 'Rouge Script', cursive; }
   .section {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%; }
     .section .section__article {
@@ -163,11 +165,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 100px 500px 250px 700px 20px;
-    grid-template-areas: "logo nav"
- "aceitunas aceitunas"
- "quesos quesos"
- "carrusel carrusel"
- "footer footer"; }
+    grid-template-areas: "logo nav" "aceitunas aceitunas" "quesos quesos" "carrusel carrusel" "footer footer"; }
   .tunas {
     height: fit-content; }
     .tunas .tunas__titulo {
@@ -213,33 +211,29 @@ header {
       color: #31572C;
       text-align: center;
       font-family: 'Rouge Script', cursive; }
-  /*!footer*/
-  .contenedor .footer {
-    height: 30px; }
-    .contenedor .footer .footer__div {
-      height: 100%; }
-      .contenedor .footer .footer__div .footer__p {
-        font-size: 20px; }
-      .contenedor .footer .footer__div .footer__icono {
-        color: #eef788;
-        justify-self: center;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        font-size: 20px;
-        box-shadow: 0 0 2.5px 4px rgba(0, 0, 0, 0.09); }
-        .contenedor .footer .footer__div .footer__icono:hover {
-          color: #212529; }
-  /**fin del footer*/ }
+  /*footer*/
+  .redesSociales {
+    margin-left: 2px;
+    height: 30px;
+    font-size: 15px; }
+    .redesSociales .icono {
+      width: 18px;
+      height: 18px;
+      box-shadow: 0 0 2.5px 4px rgba(0, 0, 0, 0.09);
+      margin: 0 5px;
+      line-height: 18px;
+      font-size: 18px; }
+    .redesSociales p {
+      font-size: 18px;
+      margin-right: 5px; }
+  /*Fin del footer*/ }
 
 @media only screen and (min-width: 1024px) {
   #grilla2 {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 3fr;
     grid-template-rows: 40px 900px 40px;
-    grid-template-areas: "logo nav nav nav"
- "section section section section"
- "footer footer footer footer";
+    grid-template-areas: "logo nav nav nav" "section section section section" "footer footer footer footer";
     row-gap: 10px;
     width: 100%;
     height: auto; }
@@ -300,11 +294,7 @@ header {
   #grilla1 {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 3fr;
-    grid-template-areas: "logo nav nav nav"
- "aceitunas aceitunas aceitunas aceitunas"
- "quesos quesos quesos quesos"
- "carrusel carrusel carrusel carrusel"
- "footer footer footer footer"; }
+    grid-template-areas: "logo nav nav nav" "aceitunas aceitunas aceitunas aceitunas" "quesos quesos quesos quesos" "carrusel carrusel carrusel carrusel" "footer footer footer footer"; }
   .tunas {
     grid-area: aceitunas; }
     .tunas .tunas__titulo {

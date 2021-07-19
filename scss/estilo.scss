@@ -6,15 +6,12 @@ $verde2:#31572C;
 $verde3:#4F772D;
 $font:32px;
 /*variables*/
-p{
-    color: cyan;
-}
 *{
     padding: 0;
     margin: 0;
 }
 body{
-    background-image: linear-gradient(white, #fdf6a1);
+    background-color: #faf9b7;
     background-size: contain;
 }
 @mixin titulos ($size,$weight,$style){
@@ -126,6 +123,7 @@ header{
     color: #eef788;
     font-family:'Lora', serif;
     margin: 0rem;
+    margin-right: 5px;
   }
 }
 }
@@ -214,11 +212,11 @@ header{
 }
 .section{
     flex-direction: column;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     width: 100%;
     .section__article{
-        background-color: white;
+        background-color: white ;
         width: 90%;
         border-radius: 2em;
         .section__titulo{
