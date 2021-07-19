@@ -164,7 +164,7 @@ header {
   #grilla1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 100px 500px 250px 700px 20px;
+    grid-template-rows: 5fr 25fr 12fr 30fr 1fr;
     grid-template-areas: "logo nav" "aceitunas aceitunas" "quesos quesos" "carrusel carrusel" "footer footer"; }
   .tunas {
     height: fit-content; }
