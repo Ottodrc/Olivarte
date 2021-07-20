@@ -66,7 +66,7 @@ header {
     .divFoot .redesSociales .icono {
       text-decoration: none;
       color: #eef788;
-      border-radius: 2px;
+      border-radius: 2em;
       text-align: center; }
       .divFoot .redesSociales .icono:hover {
         color: #212529; }
@@ -227,6 +227,136 @@ header {
       font-size: 18px;
       margin-right: 5px; }
   /*Fin del footer*/ }
+
+@media only screen and (min-width: 600px) {
+  #grilla2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 26.66fr 1fr;
+    grid-template-areas: "logo nav nav" "section section section" "footer footer footer"; }
+  /*menu*/
+  .olivArte {
+    grid-area: logo;
+    font-size: 30px;
+    height: 30px; }
+  header {
+    grid-area: nav; }
+    header .menu {
+      font-size: 15px;
+      height: 30px; }
+      header .menu .menu__lista {
+        height: 100%;
+        margin: 0%;
+        padding: 0%;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center; }
+        header .menu .menu__lista .menu__item {
+          width: fit-content;
+          height: fit-content; }
+          header .menu .menu__lista .menu__item .menu__link {
+            margin: 0px 5px; }
+  /*fin del menu*/
+  /*!section*/
+  #pregFrecuentes {
+    font-size: 64px;
+    font-weight: 500;
+    font-style: normal;
+    color: #31572C;
+    text-align: center;
+    font-family: 'Rouge Script', cursive; }
+  .section {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; }
+    .section .section__article {
+      background-color: white;
+      width: 90%;
+      border-radius: 2em; }
+      .section .section__article .section__titulo {
+        font-size: 40px;
+        font-weight: 500;
+        font-style: italic;
+        color: #31572C;
+        text-align: center;
+        font-family: 'Rouge Script', cursive; }
+      .section .section__article .section__p {
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        color: #4F772D;
+        text-align: center;
+        font-family: 'Lora', serif;
+        font-style: normal;
+        font-weight: 500; }
+  /**fin del section*/
+  /*footer*/
+  .redesSociales {
+    margin-left: 2px;
+    height: 30px;
+    font-size: 15px; }
+    .redesSociales .icono {
+      width: 20px;
+      height: 20px;
+      box-shadow: 0 0 2.5px 4px rgba(0, 0, 0, 0.09);
+      margin: 0 5px;
+      line-height: 20px;
+      font-size: 20px; }
+    .redesSociales p {
+      font-size: 18px;
+      margin-right: 5px; }
+  /*Fin del footer*/
+  #grilla1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 16.66fr 7.33fr 23.33fr 1fr;
+    grid-template-areas: "logo  nav nav" "aceitunas aceitunas aceitunas" "quesos quesos quesos" "carrusel carrusel carrusel" "footer footer footer"; }
+  .tunas {
+    height: fit-content; }
+    .tunas .tunas__titulo {
+      font-size: 64px;
+      font-weight: normal;
+      font-style: normal;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+    .tunas .tunas__parrafo {
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+      color: #4F772D;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500; }
+  .quesos {
+    height: fit-content; }
+    .quesos .quesos__titulo {
+      font-size: 64px;
+      font-weight: normal;
+      font-style: normal;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; }
+    .quesos .quesos__parrafos {
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+      color: #4F772D;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500; }
+  #carrusel {
+    width: fit-content; }
+    #carrusel .titulo {
+      font-size: 64px;
+      font-weight: normal;
+      font-style: italic;
+      color: #31572C;
+      text-align: center;
+      font-family: 'Rouge Script', cursive; } }
 
 @media only screen and (min-width: 1024px) {
   #grilla2 {

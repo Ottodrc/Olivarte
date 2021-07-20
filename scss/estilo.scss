@@ -111,7 +111,7 @@ header{
    .icono{
     text-decoration: none;
     color: #eef788;
-    border-radius: 2px;
+    border-radius: 2em;
     text-align: center;
     
     &:hover {
@@ -289,7 +289,130 @@ header{
   /*Fin del footer*/
 
 }
+@media only screen and (min-width: 600px) {
+    #grilla2{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 26.66fr 1fr;
+        grid-template-areas:"logo nav nav"
+                            "section section section"
+                            "footer footer footer";
+}
+/*menu*/
+.olivArte{
+    grid-area: logo;
+    font-size: 30px;
+    height: 30px;
+   
+}
+header{
+    grid-area: nav;
+    .menu{
+        font-size: 15px;
+        height: 30px;
+        .menu__lista{
+            height: 100%;
+            margin: 0%;
+            padding: 0%;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            .menu__item{
+                width: fit-content;
+        
+                height: fit-content;
+                .menu__link{
+                    margin: 0px 5px;
+                }
+            }
+        }
+    }
+}
+/*fin del menu*/
+/*!section*/
+#pregFrecuentes{
+    @include titulos(64px,500 ,normal )
+}
+.section{
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    .section__article{
+        background-color: white ;
+        width: 90%;
+        border-radius: 2em;
+        .section__titulo{
+          @include titulos(40px,500 ,italic )
+            
+        }
+        .section__p{
+            @include parrafos(20px,40px,center);
+            
+        }
+    }
+}
+/**fin del section*/
 
+ /*footer*/
+ .redesSociales {
+    margin-left: 2px;
+    height: 30px;
+    font-size: 15px;
+  
+  .icono{
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
+    margin: 0 5px;
+    line-height: 20px;
+    font-size: 20px;
+  }
+  
+  p{
+    font-size: 18px;
+    
+    margin-right: 5px;
+  }
+}
+  /*Fin del footer*/
+
+#grilla1{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 16.66fr 7.33fr 23.33fr 1fr;
+    grid-template-areas: "logo  nav nav"
+                        "aceitunas aceitunas aceitunas"
+                        "quesos quesos quesos"
+                        "carrusel carrusel carrusel"
+                        "footer footer footer";
+}
+.tunas{
+    height: fit-content;
+    .tunas__titulo{
+        @include titulos(($font)*2,normal,normal )
+    }
+    .tunas__parrafo{
+        @include parrafos(25px,30px ,center )
+    }
+}
+
+.quesos{
+    height: fit-content;
+    .quesos__titulo{
+        @include titulos(($font)*2,normal ,normal )
+    }
+    .quesos__parrafos{
+        @include parrafos(25px,30px ,center )
+    }
+}
+#carrusel{
+    width: fit-content;
+    .titulo{
+        @include titulos($font*2,normal ,italic)
+    }
+}
+}
 @media only screen and (min-width: 1024px) {
 
 #grilla2{

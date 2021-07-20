@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
   }
-body { 
+body {
     background-color:#faf9b7;
     background-size: contain;
     height: auto;
@@ -417,23 +417,27 @@ form{
    #grilla1{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 35px 60px 50px 500px 500px 500px 35px;
+    grid-template-rows: 1fr 2.5fr 3.33fr 34fr 1fr;
     grid-template-areas: "logo nav"
                         "titu titu"
                         "parrafos parrafos"
                         "media media"
-                        "media media"
-                        "media media"
                         "footer footer";
                 
   } 
-  .titulo{
-    font-size: 50px;
+  #titulo{
     grid-area: titu;
+    height: fit-content;
+    justify-content: center;
   }
-  .parrafos{
-    font-size: 20px;
-    grid-area: parrafos;
+ #titulo .titulo{
+    font-size: 64px;
+ }
+ #parrafo{
+   grid-area: parrafos;
+ }
+ #parrafo .parrafos{
+    font-size: 32px;
   }
 
 
@@ -461,7 +465,7 @@ form{
     grid-area: media;
     display:flex ;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     justify-items: center;
     width: 100%;
   }
@@ -471,7 +475,7 @@ form{
   }
   .galeria__img{
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 /*fin de galería*/
 
@@ -479,25 +483,21 @@ form{
 
 .redesSociales {
   margin-left: 2px;
-  height: 20px;
-  font-size: 12px;
+  height: 30px;
+  font-size: 15px;
 }
 .redesSociales .icono{
   width: 20px;
   height: 20px;
-  box-shadow: 0 0 2.5px 5px rgba(0,0,0,0.09);
+  border-radius: 2em;
+  box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
   margin: 0 5px;
   line-height: 20px;
   font-size: 20px;
 }
-a:after {
-  width: 20px;
-  height: 20px;
-  bottom: -20px;
-}
 .redesSociales > p{
-  font-size: 12px;
-  box-shadow: 0 0 2.5px 5px rgba(0,0,0,0.09);
+  font-size: 18px;
+
   margin-right: 5px;
 }
 /*Fin del footer*/
@@ -550,14 +550,26 @@ form{
 #grilla4{
   display: grid;
   grid-template-columns: 1fr 2fr 3fr;
-  grid-template-rows: 30px 60px 200px 500px 500px 30px;
+  grid-template-rows: 1fr 2fr 5fr 16fr 16fr 1fr;
   grid-template-areas: "logo nav nav"
                         "titu titu titu" 
                         "parrafos parrafos parrafos"
                         "media1 media1 media1"
                         "media2 media2 media2"
                         "footer footer footer";
-  row-gap: 10px;                    
+                
+}
+#quienSomos{
+  grid-area: titu;
+  height: fit-content;
+}
+#quienSomos  > h1{
+  font-size: 64px;
+
+}
+#historia{
+  align-self: center;
+
 }
 #historia > p{
   font-size: 20px;
@@ -565,17 +577,17 @@ form{
 }
   /*galeria*/
   #media1{
-    width: 80%;
-    height: 80%;
-    height: fit-content;
+    grid-area: media1;
+    width: 70%;
+    height: 70%;
+    align-self: center;
   }
 
   #media2{
     grid-area: media2;
-    height: fit-content;
-    width: 80%;
-    height: 80%;
-    
+    width: 70%;
+    height: 70%;
+    align-self: center;
   }
   /* fin galeria*/
 }
@@ -585,7 +597,7 @@ form{
    #grilla1{
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 2fr;
-    grid-template-rows: 40px 80px 80px 400px 40px;
+    grid-template-rows: 1fr 2fr 2fr 30fr 1fr;
     grid-template-areas: "logo nav nav nav"
                         "titu titu titu titu"
                         "parrafos parrafos parrafos parrafos"
@@ -594,14 +606,18 @@ form{
   
   
   } 
-.titulo{
-
-    font-size: 82px;
+  #titulo{
     grid-area: titu;
+  }
+ #titulo .titulo{
+    font-size: 70px;
 }
-.parrafos{
-    font-size: 29px;
-    grid-area: parrafos;
+#parrafo{
+  grid-area: parrafos;
+}
+#parrafo .parrafos{
+    font-size: 32px;
+    
 }
 
   /*menu*/
@@ -626,13 +642,13 @@ form{
 
   /*galeria*/
   .galeria{
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     justify-items: center;
     width: 100%;
   }
   .galeria__div{
-    width: 30%;
+    width: 80%;
     height: fit-content;
   }
   .galeria__img{
