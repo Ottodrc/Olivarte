@@ -597,7 +597,7 @@ form{
    #grilla1{
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 2fr;
-    grid-template-rows: 1fr 2fr 2fr 30fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 35fr 1fr;
     grid-template-areas: "logo nav nav nav"
                         "titu titu titu titu"
                         "parrafos parrafos parrafos parrafos"
@@ -648,7 +648,7 @@ form{
     width: 100%;
   }
   .galeria__div{
-    width: 80%;
+    width: 70%;
     height: fit-content;
   }
   .galeria__img{
@@ -678,7 +678,7 @@ form{
   }
   .redesSociales > p{
     font-size: 20px;
-    box-shadow: 0 0 5px 10px rgba(0,0,0,0.09);
+    
     margin-right: 10px;
   }
   /*Fin del footer*/
