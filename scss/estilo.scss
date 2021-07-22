@@ -272,11 +272,11 @@ header{
     font-size: 15px;
   
   .icono{
-    width: 18px;
-    height: 18px;
-    box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
     margin: 0 5px;
-    line-height: 18px;
+    line-height: 30px;
     font-size: 18px;
   }
   
@@ -361,12 +361,12 @@ header{
     font-size: 15px;
   
   .icono{
-    width: 20px;
-    height: 20px;
-    box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
     margin: 0 5px;
-    line-height: 20px;
-    font-size: 20px;
+    line-height: 30px;
+
   }
   
   p{
@@ -475,25 +475,28 @@ header{
 }
 /**fin del section*/
 
-/*!footer*/
-.contenedor{
-    .footer{
-        height: 40px;
-        font-size: 20px;
+ /*footer*/
+ .redesSociales {
+    margin-left: 2px;
+    height: 30px;
+    font-size: 20px;
+  
+  .icono{
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+    margin: 0 5px;
+    line-height: 30px;
 
-        .footer__div{
-            height: 40px;
-            .footer__p{
-                font-size: 20px;
-            }
-            .footer__icono{
-                font-size: 25px;
-
-            }
-        }
-    }
+  }
+  
+  p{
+    font-size: 20px;
+    
+    margin-right: 5px;
+  }
 }
-/**fin del footer*/
+  /*Fin del footer*/
 
 #grilla1{
     display: grid;

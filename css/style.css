@@ -117,9 +117,8 @@ header > nav{
   border-top: 1px rgba(27, 32, 26, 0.979)solid;
 }
 .redesSociales .icono{
-  text-decoration: none;
+
   color: #eef788;
-  border-radius: 2px;
   text-align: center;
 }
 .icono:hover {
@@ -285,7 +284,7 @@ transition: 0.5s;
 }
 #olivArte{  
   font-size: 40px;
-  height: 90px;
+  height: 91px;
 }
 /*fin del menu*/
   /*galeria*/
@@ -317,11 +316,12 @@ transition: 0.5s;
   font-size: 15px;
 }
 .redesSociales .icono{
-  width: 18px;
-  height: 18px;
-  box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
-  margin: 0 5px;
-  line-height: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 2em;
+  box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+  margin: 0 10px;
+  line-height: 30px;
   font-size: 18px;
 }
 
@@ -487,12 +487,12 @@ form{
   font-size: 15px;
 }
 .redesSociales .icono{
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 2em;
-  box-shadow: 0 0 2.5px 4px rgba(0,0,0,0.09);
-  margin: 0 5px;
-  line-height: 20px;
+  box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+  margin: 0 10px;
+  line-height: 30px;
   font-size: 20px;
 }
 .redesSociales > p{
@@ -524,7 +524,7 @@ form{
 #grilla3{
   display: grid;
   grid-template-columns:  1fr 1fr 2fr;
-  grid-template-rows: 1fr 600px 1fr;
+  grid-template-rows: 1fr 30fr 1fr;
   grid-template-areas: "logo nav nav"
                         "form form form" 
                         "footer footer footer";
@@ -666,15 +666,11 @@ form{
   .redesSociales .icono{
     width: 30px;
     height: 30px;
-    box-shadow: 0 0 5px 10px rgba(0,0,0,0.09);
+    border-radius: 2em;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
     margin: 0 10px;
     line-height: 30px;
     font-size: 20px;
-  }
-  a:after {
-    width: 30px;
-    height: 30px;
-    bottom: -30px;
   }
   .redesSociales > p{
     font-size: 20px;
@@ -738,6 +734,9 @@ form{
                           "parrafos parrafos media media"
                           "footer footer footer footer";              
   }
+  #hisotria{
+    align-self: flex-start;
+  }
   #historia > p{
     font-size: 30px;
     line-height: 30px;
@@ -747,6 +746,7 @@ form{
       grid-area: media;
       width: 70%;
       height: fit-content;
+      align-self: flex-start;
     }
 
   #media2{
@@ -755,6 +755,7 @@ form{
     margin-bottom: 50px;
     height: fit-content;
     margin-top: 20px;
+    align-self: flex-end;
   }
     /* fin galeria*/
 }
@@ -799,7 +800,8 @@ form{
   #olivArte{  
     font-size: 40px;
     height: 40px;
-    justify-content: flex-start; 
+    justify-content: flex-start;
+    padding: 0px;
   }
   /*fin de menu*/
 
@@ -826,23 +828,23 @@ form{
   /*footer*/
   .redesSociales {
     margin-left: 2px;
-    height: 40px;
+    height: 30px;
     font-size: 20px;
+
   }
   .redesSociales .icono{
-    margin-left: 2px;
-    height: 40px;
-    font-size: 20px;
-  }
-  a:after {
     width: 30px;
     height: 30px;
-    bottom: -30px;
+    border-radius: 2em;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+    margin: 0 5px;
+    line-height: 30px;
+    font-size: 20px;
   }
   .redesSociales > p{
     font-size: 20px;
     margin-right: 10px;
-    border-radius: 0%;
+
   }
   /*Fin del footer*/
 
@@ -877,7 +879,7 @@ form{
   #grilla3{
     display: grid;
     grid-template-columns:  1fr 1fr 2fr;
-    grid-template-rows: 1fr 600px 1fr;
+    grid-template-rows: 1fr 20fr 1fr;
     grid-template-areas: "logo nav nav"
                           "form form form" 
                           "footer footer footer";
@@ -910,22 +912,26 @@ form{
                           "parrafos parrafos media media"
                           "footer footer footer footer";                   
   }
+  #historia{
+    align-self: flex-start;
+  }
 #historia > p{
   font-size: 30px;
   line-height: 40px;
+  
 }
 /*galeria*/
 #media1{
   grid-area: media;
     width: 60%;
     height: fit-content;
-    justify-self: center;
+    align-self: flex-start;
 }
 #media2 {
   grid-area: media;
     width: 60%;
     height: fit-content;
-    justify-self: center;
+    align-self: flex-end;
 }
 #media2 > img{
   margin-bottom: 90px;

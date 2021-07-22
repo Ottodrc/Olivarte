@@ -217,11 +217,11 @@ header {
     height: 30px;
     font-size: 15px; }
     .redesSociales .icono {
-      width: 18px;
-      height: 18px;
-      box-shadow: 0 0 2.5px 4px rgba(0, 0, 0, 0.09);
+      width: 30px;
+      height: 30px;
+      box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.09);
       margin: 0 5px;
-      line-height: 18px;
+      line-height: 30px;
       font-size: 18px; }
     .redesSociales p {
       font-size: 18px;
@@ -297,12 +297,11 @@ header {
     height: 30px;
     font-size: 15px; }
     .redesSociales .icono {
-      width: 20px;
-      height: 20px;
-      box-shadow: 0 0 2.5px 4px rgba(0, 0, 0, 0.09);
+      width: 30px;
+      height: 30px;
+      box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.09);
       margin: 0 5px;
-      line-height: 20px;
-      font-size: 20px; }
+      line-height: 30px; }
     .redesSociales p {
       font-size: 18px;
       margin-right: 5px; }
@@ -410,17 +409,21 @@ header {
       font-style: normal;
       font-weight: 500; }
   /**fin del section*/
-  /*!footer*/
-  .contenedor .footer {
-    height: 40px;
+  /*footer*/
+  .redesSociales {
+    margin-left: 2px;
+    height: 30px;
     font-size: 20px; }
-    .contenedor .footer .footer__div {
-      height: 40px; }
-      .contenedor .footer .footer__div .footer__p {
-        font-size: 20px; }
-      .contenedor .footer .footer__div .footer__icono {
-        font-size: 25px; }
-  /**fin del footer*/
+    .redesSociales .icono {
+      width: 30px;
+      height: 30px;
+      box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.09);
+      margin: 0 5px;
+      line-height: 30px; }
+    .redesSociales p {
+      font-size: 20px;
+      margin-right: 5px; }
+  /*Fin del footer*/
   #grilla1 {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 3fr;
