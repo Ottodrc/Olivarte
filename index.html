@@ -7,16 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rouge+Script&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="norefer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="norrefer"/>
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Delicias artesanales con aceitunas, quesos, encurtidos y afines. Somos los productores de aceitunas rellenas y quesos saborizados número uno en Rosario.">
     <meta name="keywords" content="aceitunas, aceitunas rellenas, delicatessen, gourmet, artesanal, aceitunas verdes, aceitunas negras">
     <title>Olivarte | Home</title>
 </head>
 <body id="grilla1">
-   <div id="olivArte"> <a href="index.html" >Olivarte</a></div>
+   
     <header>
         <nav class="menu">
+            <div id="logo"> <a href="index.html" >Olivarte</a></div>
             <ul>
                 <li> <a href="index.html">HOME</a> </li>
                 <li> <a href="quienessomos.html">QUIÉNES SOMOS</a> </li>
@@ -34,26 +35,57 @@
     <div id="parrafo">
         <p class="parrafos" >Delicias artesanales con aceitunas, quesos, encurtidos y afines.</p>
     </div>
-    <div class="galeria">
-        <div class="galeria__div">
-            <img class="galeria__img" src="media/aaa.webp" alt=" frascos de aceitunas rellenas">
+    <div id="carruselo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="w-100 d-block " src="media/aDef.jpg" alt="Etiqueta de tapa">
+            </div>
+            <div class="carousel-item">
+              <img class="w-100 d-block " src="media/tresTunas.jpg" alt="Frascos de quesos primer plano">
+            </div>
+            <div class="carousel-item">
+              <img class="w-100 d-block " src="media/bbBanner.jpg" alt="flyer olivarte">
+            </div>
+          </div>
+      </div>
+      <div id="clientes">
+        <h2 class="titulo">Clientes:</h2>
+        <div class="clientesDiv">
+          <img src="media/fotoRubio.jpg" alt="cliente1">
+          <div class="clientesP"><p>"Excelentes productos y atención"</p></div>
         </div>
-        <div class="galeria__div">
-            <img class="galeria__img" src="media/Olivarte2.webp" alt="frascos de quesos saborizados">
+        <div class="clientesDiv">
+          <img src="media/fotoMorocho.jpg" alt="Cliente2">
+         <div class="clientesP"><p class="clientesP">"Buenos sabores y combinaciones"</p></div> 
         </div>
-        <div class="galeria__div">
-            <img class="galeria__img" src="media/olivarte3.webp" alt="Primer plano de aceitunas rellenas">
+        <div class="clientesDiv">
+          <img src="media/fotoclientas.jpg" alt="Cliente3">
+          <div class="clientesP"><p >"Muy buena atención y precios baratos"</p></div>
         </div>
-    </div>
-
+      </div>
     <div class="divFoot">
         <footer>
-        <div class="redesSociales">
-            <p>Olivarte SA</p>
+          <h3 class="tituloFoot">Contacto</h3>
+          <ul class="datos">
+            <li>Tel:+543413280969</li>
+            <li>Felipe Moré 2986</li>
+            <li>Rosario, Argentina</li>
+          </ul>
+          <h3 class="tituloFoot">Redes sociales</h3>
+          <div class="redesSociales">
             <a href="https://www.facebook.com/Olivarte-336791706482646"  target=_blank title="Facebook" class="icono"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/oliv.arte/?hl=es-la" target=_blank title="Instagram" class="icono"><i class="fab fa-instagram"></i></a>
+            <a href="twitter.html" target=_blank title="Instagram" class="icono"><i class="fab fa-twitter"></i></a>
+        </div>
+        <h3 class="tituloFoot" id="pago">Formas de Pago</h3>
+        <div class="legalInfo">
+          <i class="far fa-money-bill-alt"></i></li>
+          <i class="far fa-credit-card"></i></li>
+          <i class="fab fa-bitcoin"></i></li>
         </div>
         </footer>
     </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

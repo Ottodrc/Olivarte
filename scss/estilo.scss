@@ -1,18 +1,22 @@
 /*variables*/
 $colorCrema:#eef788;
 $colorHover:#212529;
-$Verde1:#90A955;
+$verde1:#90A955;
 $verde2:#31572C;
 $verde3:#4F772D;
 $font:32px;
+
+
 /*variables*/
 *{
     padding: 0;
     margin: 0;
 }
 body{
-    background-color: #faf9b7;
-    background-size: contain;
+    background-color: #fffbff;
+}
+ul{
+    list-style: none;
 }
 @mixin titulos ($size,$weight,$style){
     font-size: $size;
@@ -33,38 +37,44 @@ body{
     font-style:normal;
     font-weight: 500;
 }
-
+@mixin pregunta ($size,$weight,$align){
+    font-size: $size;
+    font-weight: $weight;
+    text-align: $align;
+    color: $verde2;
+    font-family: 'Ubuntu', sans-serif;
+}
 /*!menu*/
-.olivArte{
-    grid-area: logo;
-    background-color: $Verde1;
-    border-bottom: 1px solid $colorHover;
-    font-weight: thin;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    padding-left: 2px;
-    justify-content: flex-start; 
+.logo{
+    font-size: 40px;
+    width:fit-content;
+    align-self: center;
     a{
+        height: fit-content;
         color: $colorCrema;
         font-family: 'Rouge Script', cursive;
         text-decoration: none;
-        align-self: center;
       }
   }
 header{
     grid-area: nav;
     height: fit-content;
     .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
         border-bottom: 1px  $colorHover solid;
         width: 100%;
-        background-color: $Verde1;
+        background-color: $verde1;
         
         .menu__lista{
+            width:800px;
             height: 100%;
             list-style: none;
             display: flex;
         .menu__item{
+            font-family:'Lora', serif;
+            height: fit-content;
             .menu__link{
                 text-decoration: none;
                 color: $colorCrema;
@@ -86,7 +96,12 @@ header{
     grid-area: section;
     display: flex;
     .section__article{
+        background-color: $colorCrema;
+        width: 90%;
+        border-radius: 2em;
+        height: fit-content;
         .section__p{
+            padding: 0 1px;
             a{
                 text-decoration: none;
             }
@@ -95,39 +110,38 @@ header{
 }
 /**fin del section*/
 
+/*footer*/
 /*!footer*/
 .divFoot{
     grid-area: footer;
     height:fit-content;
     align-self: end;
     background-color: #90A955;
-
   .redesSociales{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-top: 1px rgba(27, 32, 26, 0.979)solid;
-  
-   .icono{
-    text-decoration: none;
-    color: #eef788;
-    border-radius: 2em;
-    text-align: center;
-    
-    &:hover {
-    color: #212529;
-    }
-}
+    .icono{
+        color: #eef788;
+        text-align: center;
+        &:hover {
+            color: #212529;
+        }
 
-  p{
-    color: #eef788;
-    font-family:'Lora', serif;
-    margin: 0rem;
-    margin-right: 5px;
+    }
+   
   }
-}
-}
-  /**Fin del footer*/
+ .datos{
+      height: fit-content;
+      justify-self: center;
+      align-self: center;
+  }
+  }
+
+
+
+
+/*fin del footer*/
   
   
 
@@ -169,34 +183,31 @@ header{
 #grilla2{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 9fr 0.3fr;
-        grid-template-areas:"logo nav nav"
+        grid-template-rows: 1.2fr 14fr 2fr;
+        grid-template-areas:"nav nav nav"
                             "section section section"
                             "footer footer footer";
 }
 /*menu*/
-.olivArte{
-    grid-area: logo;
-    font-size: 40px;
-    height: 90px;
-   
-}
+
 header{
     grid-area: nav;
     .menu{
-        font-size: 12px;
-        height: 90px;
+        .logo{
+            font-size: 64px; 
+        }
+        font-size: 15px;
+        height: 120px;
         .menu__lista{
             height: 100%;
             margin: 0%;
             padding: 0%;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: flex-end;
             .menu__item{
+               height: 22px;
                 width: fit-content;
-        
-                height: fit-content;
                 .menu__link{
                     margin: 0px 5px;
                 }
@@ -216,85 +227,274 @@ header{
     align-items: center;
     width: 100%;
     .section__article{
-        background-color: white ;
-        width: 90%;
-        border-radius: 2em;
+
         .section__titulo{
-          @include titulos(32px,500 ,italic )
-            
+         @include pregunta(25px,normal,center)
         }
         .section__p{
             @include parrafos(20px,40px,center);
+    
             
         }
     }
 }
 /**fin del section*/
+
 #grilla1{
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5fr 25fr 12fr 30fr 1fr;
-    grid-template-areas: "logo nav"
-                        "aceitunas aceitunas"
-                        "quesos quesos"
-                        "carrusel carrusel"
-                        "footer footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 1.2fr 2.1fr 22fr 0.8fr 12fr 2fr 9fr 2fr;
+    grid-template-areas: "nav "
+                        "aceitunas"
+                        "clasico"
+                        "deluxe "
+                        "deluxes"
+                        "quesos"
+                        "quesito"
+                        "footer ";
+    row-gap: 10px;
+    column-gap: 10px;
+    overflow-x: hidden;
+    
 }
 .tunas{
-    height: fit-content;
+    grid-area: aceitunas;
     .tunas__titulo{
-        @include titulos(($font)+8,normal,normal )
+        @include titulos(($font*2)+4,normal ,normal)
+        
     }
     .tunas__parrafo{
-        @include parrafos(20px,22px ,center )
+        @include pregunta($font,normal , center);
+
     }
+}
+#clasico{
+    width: 100%;
+    height: fit-content;
+    grid-area: clasico;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8,1fr);
+    grid-template-areas:"uno"
+                        "dos"
+                        "tres"
+                        "cuatro"
+                        "cinco"
+                        "seis"
+                        "siete"
+                        "ocho";
+
+    row-gap: 10px;
+    column-gap: 10px;
+    
+ .producto{
+     justify-self: center;
+     align-self: center;
+     display: flex;
+     flex-direction: column;
+     border-radius: 2em;
+     width: 80%;
+     height: 300px;
+     background-color: $colorCrema;
+     align-self: center;
+     justify-content: center;
+     align-items: center;
+  
+    img{
+        width :70%
+    }
+    p{
+        height: fit-content;
+        margin:0px 5px ;
+        @include parrafos(18px, 18px,center )
+    }
+ } 
+
+ #roque{
+    grid-area: uno;
+ }
+ #holanda{
+     grid-area: dos;
+ }
+ #cheddar{
+     grid-area: tres;
+ }
+ #crudo{
+     grid-area: cuatro;
+ }
+ #salame{
+grid-area:cinco ;
+ }
+ #mix3{
+     grid-area: ocho;
+     
+     justify-self: center;
+ }
+
 }
 
-.quesos{
+#deluxeTitulo{
+    grid-area: deluxe;
+    @include pregunta($font,normal,center );
+    margin:0; 
     height: fit-content;
-    .quesos__titulo{
-        @include titulos(($font)+8,normal ,normal )
-    }
-    .quesos__parrafos{
-        @include parrafos(20px,22px ,center )
-    }
+    align-self: flex-end;
 }
-#carrusel{
-    width: fit-content;
-    .titulo{
-        @include titulos($font+8,normal ,italic)
-    }
+#deluxes{
+    width: 100%;
+    grid-area: deluxes;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-areas: "nueve"
+                        "diez"
+                        "once"
+                        "doce";
+                        
+    column-gap: 10px;
+    row-gap: 10px;
+    .producto{
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2em;
+       width: 80%;
+        height: 300px;
+        background-color: $colorCrema;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+     
+       img{
+           width :70%
+       }
+       p{
+           height: fit-content;
+           margin:0px 5px ;
+           @include parrafos(18px, 18px,center )
+       }
+    } 
+
 }
- /*footer*/
- .redesSociales {
-    margin-left: 2px;
-    height: 30px;
-    font-size: 15px;
-  
-  .icono{
-    width: 30px;
-    height: 30px;
-    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
-    margin: 0 5px;
-    line-height: 30px;
-    font-size: 18px;
-  }
-  
-  p{
-    font-size: 18px;
     
-    margin-right: 5px;
-  }
+.quesos__titulo{
+     grid-area: quesos;
+     @include titulos(($font*2)+4,normal ,normal)
 }
-  /*Fin del footer*/
+#quesito{
+    grid-area: quesito;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+.producto{
+    width: 75%;
+    border-radius: 2em;
+    height: 300px;
+    background-color: $colorCrema;
+    margin-bottom: 10px;
+    img{
+        width:50%;
+
+    }
+}
+}
+/*footer*/
+
+.divFoot{
+    grid-area: footer;
+    height:fit-content;
+    align-self: end;
+    display: flex;
+    justify-content: center;
+  
+    height:200px;
+    border-top: 1px rgba(27, 32, 26, 0.979)solid;
+    grid-area: footer; 
+    footer{
+        background-color: $verde1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr;
+    grid-template-areas: "con red"
+                        "datos redes"
+                        "csgo csgo"
+                        "pago pago";
+  
+    height: 100%;
+    width: 100%;
+    .tituloFoot{
+        width:fit-content;
+        font-size: 18px;
+        font-family: 'Ubuntu', sans-serif;
+        justify-self: center;
+        align-self: center;
+        margin: 0%;
+    }
+    .datos{
+        grid-area: datos;
+        width: fit-content;
+        justify-self: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 12px;
+        p {
+            width: 100%;
+        }
+    }
+    .redesSociales{
+        grid-area: redes;
+        height: 100%;
+        justify-content:space-evenly;
+        align-items: center;
+        .icono{
+            color: #eef788;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 2em;
+            box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+            margin: 0 10px;
+            line-height: 30px;
+            font-size: 20px;
+            &:hover {
+                color: #212529;
+             }
+        }
+    }
+  #pago{
+    grid-area: csgo; 
+  }
+  }
+  .legalInfo{
+    .far{
+        color: #eef788;
+    }
+    .fab{
+        color: #eef788;
+    } 
+    grid-area: pago;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    i{
+        font-size: 20px;
+    }
+
+  } 
+  }
+  /**Fin del footer*/
 
 }
 @media only screen and (min-width: 600px) {
+
     #grilla2{
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr 26.66fr 1fr;
-        grid-template-areas:"logo nav nav"
+        grid-template-rows: 0.4fr 4fr 1.20fr;
+        grid-template-areas:"nav nav nav"
                             "section section section"
                             "footer footer footer";
 }
@@ -308,8 +508,8 @@ header{
 header{
     grid-area: nav;
     .menu{
-        font-size: 15px;
-        height: 30px;
+        font-size: 17px;
+        height: 40px;
         .menu__lista{
             height: 100%;
             margin: 0%;
@@ -323,6 +523,7 @@ header{
                 height: fit-content;
                 .menu__link{
                     margin: 0px 5px;
+                    font-family:'Lora', serif;
                 }
             }
         }
@@ -339,11 +540,9 @@ header{
     align-items: center;
     width: 100%;
     .section__article{
-        background-color: white ;
-        width: 90%;
-        border-radius: 2em;
+
         .section__titulo{
-          @include titulos(40px,500 ,italic )
+          @include pregunta(30px,500 , center)
             
         }
         .section__p{
@@ -354,63 +553,207 @@ header{
 }
 /**fin del section*/
 
- /*footer*/
- .redesSociales {
-    margin-left: 2px;
-    height: 30px;
-    font-size: 15px;
-  
-  .icono{
-    width: 30px;
-    height: 30px;
-    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
-    margin: 0 5px;
-    line-height: 30px;
+/*footer*/
 
-  }
+.divFoot{
+    grid-area: footer;
+    height:fit-content;
+    align-self: end;
+    display: flex;
+    justify-content: center;
   
-  p{
-    font-size: 18px;
-    
-    margin-right: 5px;
+    height:200px;
+    border-top: 1px rgba(27, 32, 26, 0.979)solid;
+    grid-area: footer; 
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: "con red legal"
+        "datos redes none";
+        height: 100%;
+        width: 90%;
+    .tituloFoot{
+        width:fit-content;
+        font-size: 22px;
+        font-family: 'Ubuntu', sans-serif;
+        justify-self: center;
+        align-self: center;
+        margin: 0%;
+    }
+    .datos{
+        grid-area: datos;
+        width: fit-content;
+        justify-self: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        p {
+            width: 100%;
+        }
+    }
+    .redesSociales{
+        grid-area: redes;
+        height: 100%;
+        justify-content:space-evenly;
+        align-items: center;
+        .icono{
+            color: #eef788;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 2em;
+            box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+            margin: 0 10px;
+            line-height: 40px;
+            font-size: 30px;
+            &:hover {
+                color: #212529;
+             }
+        }
+    }
   }
-}
-  /*Fin del footer*/
+  .legalInfo{
+    .far{
+        color: #eef788;
+    }
+    .fab{
+        color: #eef788;
+    } 
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    i{
+        font-size: 30px;
+    }
 
-#grilla1{
+  } 
+  }
+  /**Fin del footer*/
+
+  #grilla1{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 16.66fr 7.33fr 23.33fr 1fr;
-    grid-template-areas: "logo  nav nav"
-                        "aceitunas aceitunas aceitunas"
-                        "quesos quesos quesos"
-                        "carrusel carrusel carrusel"
-                        "footer footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.2fr 10fr 0.3fr 6fr 0.8fr 2fr 1.2fr;
+    grid-template-areas: "nav nav"
+                        "aceitunas aceitunas"
+                        "clasico clasico"
+                        "deluxe deluxe"
+                        "deluxes deluxes"
+                        "quesos quesos"
+                        "quesito quesito"
+                        "footer footer";
+    row-gap: 10px;
+    column-gap: 10px;
 }
 .tunas{
-    height: fit-content;
+    grid-area: aceitunas;
     .tunas__titulo{
-        @include titulos(($font)*2,normal,normal )
+        @include titulos(($font*2)+4,normal ,normal)
+        
     }
     .tunas__parrafo{
-        @include parrafos(25px,30px ,center )
+        @include pregunta($font,normal , center);
+
     }
+}
+#clasico{
+    width: 100%;
+    grid-area: clasico;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas:"uno dos"
+                        "tres cuatro"
+                        "cinco seis"
+                        "siete ocho";
+
+    row-gap: 10px;
+    column-gap: 10px;
+ .producto{
+     justify-self: center;
+     align-self: center;
+     display: flex;
+     flex-direction: column;
+     border-radius: 2em;
+     width: 90%;
+     height: 300px;
+     background-color: $colorCrema;
+     align-self: center;
+     justify-content: center;
+     align-items: center;
+  
+    img{
+        width :70%
+    }
+    p{
+        height: fit-content;
+        margin:0px 5px ;
+        @include parrafos(18px, 18px,center )
+    }
+ } 
+
+img{
+width: 50%;
+}
 }
 
-.quesos{
-    height: fit-content;
-    .quesos__titulo{
-        @include titulos(($font)*2,normal ,normal )
-    }
-    .quesos__parrafos{
-        @include parrafos(25px,30px ,center )
-    }
+#deluxeTitulo{
+    grid-area: deluxe;
+    @include pregunta($font,normal,center );
+    margin:0; 
 }
-#carrusel{
-    width: fit-content;
-    .titulo{
-        @include titulos($font*2,normal ,italic)
-    }
+#deluxes{
+    grid-area: deluxes;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: "nueve diez"
+                        "once doce";
+    column-gap: 10px;
+    row-gap: 10px;
+    .producto{
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2em;
+       width: 90%;
+        height: 300px;
+        background-color: $colorCrema;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+     
+       img{
+           width :70%
+       }
+       p{
+           height: fit-content;
+           margin:0px 5px ;
+           @include parrafos(18px, 18px,center )
+       }
+    } 
+
+}
+    
+.quesos__titulo{
+     grid-area: quesos;
+     @include titulos(($font*2)+4,normal ,normal)
+}
+#quesito{
+    grid-area: quesito;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+.producto{
+    width: 75%;
+    border-radius: 2em;
+    height: 300px;
+    background-color: $colorCrema;
+    margin-bottom: 10px;
+}
 }
 }
 @media only screen and (min-width: 1024px) {
@@ -418,8 +761,8 @@ header{
 #grilla2{
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 3fr;
-    grid-template-rows:  40px 900px 40px;
-    grid-template-areas: "logo nav nav nav"
+    grid-template-rows:  0.5fr 6fr 1.2fr;
+    grid-template-areas: "nav nav nav nav"
     "section section section section"
     "footer footer footer footer";
 
@@ -436,9 +779,11 @@ header{
 }
   header{
     .menu{
-        font-size: 20px;
-        height: 40px;
-        
+        font-size: 25px;
+        height: 50px;
+        .logo{
+            font-size: 50px;
+        }
         .menu__lista{
             height: 100%;
             flex-direction: row;
@@ -464,7 +809,7 @@ header{
     .section__article{
         
         .section__titulo{
-          @include titulos($font*2,500 ,italic )
+          @include pregunta(42px,500 ,center )
             
         }
         .section__p{
@@ -475,37 +820,101 @@ header{
 }
 /**fin del section*/
 
- /*footer*/
- .redesSociales {
-    margin-left: 2px;
-    height: 30px;
-    font-size: 20px;
-  
-  .icono{
-    width: 30px;
-    height: 30px;
-    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
-    margin: 0 5px;
-    line-height: 30px;
+/*footer*/
 
-  }
+.divFoot{
+    grid-area: footer;
+    height:fit-content;
+    align-self: end;
+    display: flex;
+    justify-content: center;
   
-  p{
-    font-size: 20px;
-    
-    margin-right: 5px;
+    height:200px;
+    border-top: 1px rgba(27, 32, 26, 0.979)solid;
+    grid-area: footer; 
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: "con red legal"
+        "datos redes none";
+        height: 100%;
+        width: 90%;
+    .tituloFoot{
+        width:fit-content;
+        font-size: 22px;
+        font-family: 'Ubuntu', sans-serif;
+        justify-self: center;
+        align-self: center;
+        margin: 0%;
+    }
+    .datos{
+        grid-area: datos;
+        width: fit-content;
+        justify-self: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        p {
+            width: 100%;
+        }
+    }
+    .redesSociales{
+        grid-area: redes;
+        height: 100%;
+        justify-content:space-evenly;
+        align-items: center;
+        .icono{
+            color: #eef788;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 2em;
+            box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+            margin: 0 10px;
+            line-height: 40px;
+            font-size: 30px;
+            &:hover {
+                color: #212529;
+             }
+        }
+    }
   }
+  .legalInfo{
+    .far{
+        color: #eef788;
+    }
+    .fab{
+        color: #eef788;
+    } 
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    i{
+        font-size: 30px;
+    }
+
+  } 
+  }
+  /**Fin del footer*/
+html{
+    width: 100%;
 }
-  /*Fin del footer*/
-
 #grilla1{
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 3fr;
-    grid-template-areas: "logo nav nav nav"
-                        "aceitunas aceitunas aceitunas aceitunas"
-                        "quesos quesos quesos quesos"
-                        "carrusel carrusel carrusel carrusel"
-                        "footer footer footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav nav"
+                        "aceitunas aceitunas"
+                        "clasico clasico"
+                        "deluxe deluxe"
+                        "deluxes deluxes"
+                        "quesos quesos"
+                        "quesito quesito"
+                        "footer footer";
+    grid-auto-rows: auto;
+    row-gap: 10px;
+    column-gap: 10px;
 }
 .tunas{
     grid-area: aceitunas;
@@ -514,43 +923,149 @@ header{
         
     }
     .tunas__parrafo{
-        @include parrafos($font,40px,center);
+        @include pregunta($font,normal , center);
 
     }
-    .tunas__sabores{
-        flex-direction: row;
-        .tunas__lista{
-            font-size: 22px;
+}
+#clasico{
+    width: 100%;
+    grid-area: clasico;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"uno dos"
+                        "tres cuatro"
+                        "cinco seis"
+                        "siete ocho";
+
+    row-gap: 10px;
+    column-gap: 10px;
+ .producto{
+     justify-self: center;
+     align-self: center;
+     display: flex;
+     flex-direction: row;
+     border-radius: 2em;
+     width: 95%;
+     height: 320px;
+     background-color: $colorCrema;
+     justify-content: center;
+     align-items: center;
+  
+    img{
+        width :50%
+    }
+    p{
+        height: fit-content;
+        margin:0px 5px ;
+        @include parrafos(20px, 20px,center )
+    }
+ } 
+#cheddar{
+    grid-area: tres;
+}
+#crudo{
+    grid-area: cuatro;
+}
+#salame{
+    grid-area:cinco ;
+}
+#mix1{
+    grid-area: seis;
+}
+#mix2{
+    grid-area:siete ;
+}
+#mix3{
+    grid-area: ocho;
+}
+ }
+
+
+#deluxeTitulo{
+    grid-area: deluxe;
+    @include pregunta($font,normal,center );
+    margin:0;
+}
+#deluxes{
+
+    grid-area: deluxes;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "nueve diez"
+                        "once doce";
+ 
+    .producto{
+        display: flex;
+        flex-direction: row; 
+        border-radius: 2em;
+        width: 90%;
+        height: 320px;
+        background-color: $colorCrema;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            overflow: hidden;
         }
+    img{
+        width: 50%;
     }
-
-
-
+    p{
+        height: fit-content;
+        margin: 0px 5px;
+        @include parrafos(20px,20px ,center )
+    }
+    }
+#almendras{
+    grid-area:nueve;
+    width: 90%;
 }
-
-.quesos{
-    .quesos__titulo{
-        @include titulos(($font*2)+4,normal ,normal)
-
-    }
-    .quesos__parrafos{
-        @include parrafos($font,40px,center)
-    }
-    .quesos__lista{
-        font-size: 22px;
-    }
+#capresse{
+    grid-area: diez;
+    width: 90%;
 }
-
-#carrusel{
-
-    width: 700px;
-    .titulo{
-        @include titulos($font*2,500 ,normal )
-    }
+#palmitos{
+    grid-area: once;
+    width: 90%;
+}
+#ajo{
+    grid-area: doce;
+    width: 90%;
+}
+}
+    
+.quesos__titulo{
+     grid-area: quesos;
+     @include titulos(($font*2)+4,normal ,normal)
+}
+#quesito{
+    grid-area: quesito;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+.producto{
+    width: 75%;
+    border-radius: 2em;
+    height: 320px;
+    background-color: $colorCrema;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
  
-  .carousel-inner{
-    height: 120vh;
-    }
+   img{
+       width :50%
+   }
+   p{
+       height: fit-content;
+       margin:0px 5px ;
+       @include parrafos(18px, 18px,center )
+   }
+} 
+
 }
- 
+
+
 }

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rouge+Script&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="norefer"/>
     <link rel="stylesheet" href="css/estilo.css">
     <meta name="description" content="Un resumen de todos nuestros productos y sus variedades.">
@@ -14,9 +15,10 @@
     <title>Olivarte | Productos</title>
 </head>
 <body id="grilla1">
-    <div class="olivArte"> <a href="index.html" >Olivarte</a></div>
+    
     <header>
       <nav class="menu">
+        <div class="logo"> <a href="index.html" >Olivarte</a></div>
           <ul class="menu__lista">
               <li class="menu__item"> 
                   <a class="menu__link" href="index.html">HOME</a> 
@@ -35,74 +37,115 @@
               </li>
           </ul>
       </nav>
-  </header>
- 
-
+  </header> 
+<!--sabores clasicos--> 
     <div class="tunas">
         <h1 class="tunas__titulo">Aceitunas Rellenas</h1>
-        <p class="tunas__parrafo">Contamos con una variedad de gustos de lo mas variada divididos en dos categorías: clasicas y deluxe!</p>
-        <h2 class="tunas__parrafo">Sabores:</h2>
-          <ul class="tunas__sabores" >
-            <ul class="tunas__lista"> Clasicos:
-              <li class="tunas__item">Queso roquefort</li>
-              <li class="tunas__item">Queso holanda</li>
-              <li class="tunas__item">Queso cheddar</li>
-              <li class="tunas__item">Jamón crudo</li>
-              <li class="tunas__item">Palmitos</li>
-              <li class="tunas__item">Salame</li>
-              <li class="tunas__item">Mix de quesos (roquefort, holanda y cheddar)</li>
-              <li class="tunas__item">Mix clásico (jamón crudo + roquefort)</li>
-              <li class="tunas__item">Mix picada (salame y queso holanda)</li>
-            </ul>
-          <ul class="tunas__lista"> Deluxe:
-            <li class="tunas__item">Capresse (Aceitunas  negras rellenas de tomates secos macerados en aceite de oliva con ajo y albahaca)</li>
-            <li class="tunas__item">Almendras (Aceitunas negras o verdes)</li>
-          </ul>
-        </ul>
-    
-    </div>
-    <div class="quesos">
-        <h1 class="quesos__titulo">Quesos Saborizados</h1>
-        <h2 class="quesos__parrafos">Contamos con una variedad de quesos saborizados macerados en aceite con un toque de oliva</h2>
-        <ul class="quesos__lista">
-          <li class="quesos__item">A las cuatro pimientas: pimienta negra, pimienta rosa, pimienta verde y pimienta de Jamaica.</li>
-          <li class="quesos__item">Picante: ají trirurado, pimienta de cayena y ají putaparió.</li>
-          <li class="quesos__item">Mediterráneo: tomates secos, ajo, albahaca y aceitunas negras. </li>
-        </ul>
-    </div>
-    
-    <div id="carrusel" class="carousel slide " data-bs-ri.de="carousel">
-      <h2 class="titulo">Galeria de productos</h2>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="w-100 d-block " src="media/ddd700.webp" alt="Etiqueta de tapa">
-          </div>
-          <div class="carousel-item">
-            <img class="w-100 d-block " src="media/ccc700.webp" alt="Frascos de quesos primer plano">
-          </div>
-          <div class="carousel-item">
-            <img class="w-100 d-block " src="media/bbb700.webp" alt="flyer olivarte">
-          </div>
-        </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        <h2 class="tunas__parrafo">Sabores clasicos:</h2>
     </div>
 
-    <div class="divFoot">
-      <footer>
+  <section id="clasico">
+    <article  data-aos="fade-up" id="roque" class="producto">
+      <img src="media/roquefort.svg" alt="Aceitunas rellenas de roquefort">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de queso azul "La Paulina", en frascos de 190cc o 360cc.</p>
+    </article>
+    <article data-aos="fade-up" id="holanda" class="producto">
+      <img src="media/holanda.svg" alt="aceitunas rellenas de queso holanda">
+      <p>Aceitunas rellenas provenientes de La Rioja "Virgen del Lago" rellenas con queso holanda "Arroyo Cabral", en frascos de 190cc o 360cc.</p>
+    </article> 
+    <article data-aos="fade-up" id="cheddar" class="producto">
+      <img src="media/cheddar.svg" alt="aceitunas rellenas de queso cheddar">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de queso cheddar "Milkaut", en frascos de 190cc 0 360cc.</p>
+    </article>
+    <article data-aos="fade-up" id="crudo" class="producto">
+      <img src="media/crudo.svg" alt="aceitunas rellenas de crudo">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de jamón crudo "Paladini", en frascos de 190cc o 360cc.</p>
+    </article>
+    <article data-aos="fade-up" id="salame" class="producto">
+      <img src="media/salame.svg" alt="aceitunas rellenas de salame">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de salame picado fino "Paladini", en frascos de 190cc o 360cc.</p>
+    </article>
+    <article data-aos="fade-up" id="mix1" class="producto">
+      <img src="media/mix clasico.svg" alt="aceitunas rellenas de crudo y roquefort">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" la mitad rellena de jamón crudo y la otra mitad de queso azul, en frascos de 190cc o 360cc.</p>
+    </article>
+    <article data-aos="fade-up" id="mix2" class="producto">
+      <img src="media/mix quesos.svg" alt="aceitunas rellenas de tres quesos">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" Rellenas en partes iguales de queso azul, queso holanda y queso cheddar, en frascos de 190cc o 360cc.</p>
+    </article>
+    <article data-aos="fade-up" id="mix3" class="producto">
+      <img src="media/mix picada.svg" alt="aceitunas rellenas de queso holanda y salame">
+      <p>Aceitunas rellenas provenientes de La Rioja "Virgen del Lago" la mitad rellena de salame y la otra mitad rellena de queso holanda, en fracos de 190cc o 360c.</p>
+    </article>
+  </section>
+
+<!--Sabores deluxe-->
+  <h2 id="deluxeTitulo">Sabores deluxe:</h2>
+
+  <section  id="deluxes">
+    <article data-aos="fade-up" id="almendras" class="producto">
+      <img src="media/almendras.svg" alt="aceitunas rellenas de almendras">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de almendras, en frascos de 190cc</p>
+    </article>
+    <article data-aos="fade-up" id="capresse" class="producto">
+      <img src="media/capresse.svg" alt="aceitunas rellenas de queso holanda y tomates secos">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de queso holanda y tomates secos, en frascos de 190cc</p>
+    </article>
+    <article data-aos="fade-up" id="palmitos" class="producto">
+      <img src="media/palmitos.svg" alt="aceitunas rellenas de palmitos">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de palmitos, en frascos de 190cc</p>
+    </article>
+    <article data-aos="fade-up" id="ajo" class="producto">
+      <img src="media/ajos.svg" alt="aceitunas rellenas de ajo">
+      <p>Aceitunas provenientes de La Rioja "Virgen del Lago" rellenas de ajo, en frascos de 190cc</p>
+    </article>
+  </section>
+  
+  <!--Quesos-->
+  <h2 class="quesos__titulo">Quesos Saborizados</h1>
+
+  <section  id="quesito">
+    <article data-aos="fade-up" class="producto">
+      <img src="media/quesoCapresse.svg" alt="">
+      <p></p>
+    </article>
+    <article  data-aos="fade-up" class="producto">
+      <img src="" alt="">
+      <p></p>
+    </article>
+    <article data-aos="fade-up" class="producto">
+      <img src="" alt="">
+      <p></p>
+    </article>
+  </section>  
+
+  <!--Footer-->
+  <div class="divFoot">
+    <footer>
+      <h3 class="tituloFoot">Contacto</h3>
+      <ul class="datos">
+        <li>Tel:+543413280969</li>
+        <li>Felipe Moré 2986</li>
+        <li>Rosario, Argentina</li>
+      </ul>
+      <h3 class="tituloFoot">Redes sociales</h3>
       <div class="redesSociales">
-          <p>Olivarte SA</p>
-          <a href="https://www.facebook.com/Olivarte-336791706482646"  target=_blank title="Facebook" class="icono"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/oliv.arte/?hl=es-la" target=_blank title="Instagram" class="icono"><i class="fab fa-instagram"></i></a>
-      </div>
-      </footer>
-  </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <a href="https://www.facebook.com/Olivarte-336791706482646"  target=_blank title="Facebook" class="icono"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/oliv.arte/?hl=es-la" target=_blank title="Instagram" class="icono"><i class="fab fa-instagram"></i></a>
+        <a href="" target=_blank title="Instagram" class="icono"><i class="fab fa-twitter"></i></a>
+    </div>
+    <h3 class="tituloFoot" id="pago">Formas de Pago</h3>
+    <div class="legalInfo">
+      <i class="far fa-money-bill-alt"></i></li>
+      <i class="far fa-credit-card"></i></li>
+      <i class="fab fa-bitcoin"></i></li>
+    </div>
+    </footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
