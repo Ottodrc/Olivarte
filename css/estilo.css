@@ -292,13 +292,28 @@ header {
     justify-content: center;
     align-items: center; }
     #quesito .producto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 75%;
       border-radius: 2em;
-      height: 300px;
+      height: 310px;
       background-color: #eef788;
       margin-bottom: 10px; }
       #quesito .producto img {
-        width: 50%; }
+        width: 75%;
+        height: 75%; }
+      #quesito .producto p {
+        height: fit-content;
+        margin: 0px 5px;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: #4F772D;
+        text-align: center;
+        font-family: 'Lora', serif;
+        font-style: normal;
+        font-weight: 500; }
   /*footer*/
   .divFoot {
     grid-area: footer;
@@ -488,7 +503,7 @@ header {
   #grilla1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 1.2fr 10fr 0.3fr 6fr 0.8fr 2fr 1.2fr;
+    grid-template-rows: min-content;
     grid-template-areas: "nav nav" "aceitunas aceitunas" "clasico clasico" "deluxe deluxe" "deluxes deluxes" "quesos quesos" "quesito quesito" "footer footer";
     row-gap: 10px;
     column-gap: 10px; }
@@ -599,11 +614,28 @@ header {
     justify-content: center;
     align-items: center; }
     #quesito .producto {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       width: 75%;
       border-radius: 2em;
       height: 300px;
       background-color: #eef788;
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+      #quesito .producto img {
+        width: 75%;
+        height: 75%; }
+      #quesito .producto p {
+        height: fit-content;
+        margin: 0px 5px;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: #4F772D;
+        text-align: center;
+        font-family: 'Lora', serif;
+        font-style: normal;
+        font-weight: 500; } }
 
 @media only screen and (min-width: 1024px) {
   #grilla2 {
@@ -725,6 +757,7 @@ header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
     grid-template-areas: "nav nav" "aceitunas aceitunas" "clasico clasico" "deluxe deluxe" "deluxes deluxes" "quesos quesos" "quesito quesito" "footer footer";
     grid-auto-rows: auto;
     row-gap: 10px;
@@ -855,6 +888,8 @@ header {
     justify-content: center;
     align-items: center; }
     #quesito .producto {
+      display: flex;
+      flex-direction: row;
       width: 75%;
       border-radius: 2em;
       height: 320px;
@@ -862,16 +897,14 @@ header {
       margin-bottom: 10px;
       justify-content: center;
       align-items: center; }
-      #quesito .producto img {
-        width: 50%; }
-      #quesito .producto p {
-        height: fit-content;
-        margin: 0px 5px;
-        font-size: 18px;
-        line-height: 18px;
-        text-align: center;
-        color: #4F772D;
-        text-align: center;
-        font-family: 'Lora', serif;
-        font-style: normal;
-        font-weight: 500; } }
+    #quesito p {
+      height: fit-content;
+      margin: 0px 5px;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: #4F772D;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 500; } }
