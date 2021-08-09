@@ -897,6 +897,9 @@ header {
       margin-bottom: 10px;
       justify-content: center;
       align-items: center; }
+      #quesito .producto img {
+        width: 300px;
+        height: 300px; }
     #quesito p {
       height: fit-content;
       margin: 0px 5px;
